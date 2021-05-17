@@ -3,11 +3,13 @@
     --master-bg-color: blue;
 }
 
+/* Main body */
 body
 {
     margin: 0;
 }
 
+/* Anchor */
 a
 {
     text-decoration: none;
@@ -15,11 +17,13 @@ a
     color: white;
 }
 
+/* Hover on anchor */
 a:hover
 {
     color: green;
 }
 
+/* Master div */
 #master
 {
     display: grid;
@@ -33,6 +37,7 @@ a:hover
 
 }
 
+/* Main calculator body */
 #main-cal-body
 {
     display: grid;
@@ -45,7 +50,7 @@ a:hover
     grid-row: 2 / 3;
     row-gap: 2%;
 }
-
+    /* Display part of the calculator */
     #main-cal-display
     {
         display: grid;
@@ -54,6 +59,7 @@ a:hover
         grid-template-columns: 8% auto 8%;
         grid-template-rows: 35% auto 15%;
     }
+        /* Logo above the display screen */
         #above-display-logo
         {
             display: grid;
@@ -69,16 +75,22 @@ a:hover
             font-size: 5vmin;
             font-weight: bold;
         }
+        /* Where the callculation and result will be display */
         #output-display
         {
             display: grid;
             background-color: white;
 
             grid-column: 2 / 3;
+            grid-row: 2 / 3;    
 
-            grid-row: 2 / 3;
+            text-align: right;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 9vmin;
+            font-weight: bold;
         }
 
+    /* The calculator part for button */
     #main-cal-buttons
     {
         display: grid;
@@ -87,6 +99,7 @@ a:hover
         grid-template-columns: 8% auto 8%;
         grid-template-rows: 8% auto 8%;
     }
+        /* The box that contain the buttons */
         #calculator-button-box
         {
             display: grid;
@@ -100,7 +113,7 @@ a:hover
             grid-template-rows: 19% 19% 19% 19% 19%;
 
         }
-
+            /* Normal button format */
             .calculator-normal-button
             {
                 display: grid;
@@ -113,6 +126,7 @@ a:hover
                 font-weight: bold;
             }
 
+            /* The bigger button size for the equal size */
             #custom-equal-sign
             {
                 grid-column: 4 / 5;
