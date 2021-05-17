@@ -1,0 +1,41 @@
+:root
+{   
+    --master-bg-color: blue;
+}
+
+#master
+{
+    display: grid;
+    background-color: var(--master-bg-color);
+    height: 100%;
+    width: 100%;
+
+    position: relative;
+
+
+}
+
+#main-cal-body
+{
+    display: grid;
+    background-color: greenyellow;
+    height: 600px;
+    width: 600px;
+    grid-template-rows: 30% auto;
+}
+
+    #main-cal-display
+    {
+        display: grid;
+        background-color: red;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    #main-cal-buttons
+    {
+        
+
+    }
