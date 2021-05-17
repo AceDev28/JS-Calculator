@@ -8,6 +8,18 @@ body
     margin: 0;
 }
 
+a
+{
+    text-decoration: none;
+
+    color: white;
+}
+
+a:hover
+{
+    color: green;
+}
+
 #master
 {
     display: grid;
@@ -91,10 +103,11 @@ body
 
             .calculator-normal-button
             {
+                display: grid;
                 background-color: red;
 
                 text-align: center;
-                padding-top: 2%;
+                padding-top: 5%;
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: 5vmin;
                 font-weight: bold;
@@ -102,6 +115,7 @@ body
 
             #custom-equal-sign
             {
-                grid-area: 2 / 4 / 6 / 5;
-                padding-top: 50%;
+                grid-column: 4 / 5;
+                grid-row: 2 / 6;
+                
             }
