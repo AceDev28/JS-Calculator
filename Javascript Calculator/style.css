@@ -1,0 +1,164 @@
+:root
+{   
+    --master-bg-color: blue;
+}
+
+/* Main body */
+body
+{
+    margin: 0;
+}
+
+/* Anchor */
+a
+{
+    text-decoration: none;
+
+    color: white;
+}
+
+/* Hover on anchor */
+a:hover
+{
+    color: green;
+}
+
+/* Master div */
+#master
+{
+    display: grid;
+    background-color: var(--master-bg-color);
+    height: 100%;
+    width: 100%;
+
+    position: relative;
+    grid-template-columns: 30% auto 30%;
+    grid-template-rows: 10% auto 20%;
+
+}
+
+/* Main calculator body */
+#main-cal-body
+{
+    display: grid;
+    background-color: yellow;
+    height: 100%;
+    width: 100%;
+
+    grid-template-rows: 30% auto;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    row-gap: 2%;
+}
+    /* Display part of the calculator */
+    #main-cal-display
+    {
+        display: grid;
+        background-color: red;
+        
+        grid-template-columns: 8% auto 8%;
+        grid-template-rows: 25% 20% auto 15%;
+    }
+        /* Logo above the display screen */
+        #above-display-logo
+        {
+            display: grid;
+            background-color: yellow;
+
+            grid-column: 2 / 3;
+
+            grid-row: 1 / 2;
+
+            text-align: center;
+            padding-top: 1%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 4vmin;
+            font-weight: bold;
+        }
+        /* Show the last command you entered */
+        #previous-command-display
+        {
+            display: grid;
+            background-color: darkgray;
+            padding-top: 1.3%;
+
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+
+            text-align: right;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 3vmin;
+            font-weight: bold;
+        }
+        /* Where the callculation and result will be display */
+        #output-display
+        {
+            display: grid;
+            background-color: white;
+
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;    
+
+            text-align: right;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 9vmin;
+            font-weight: bold;
+        }
+
+    /* The calculator part for key */
+    #main-cal-key
+    {
+        display: grid;
+        background-color: green;
+
+        grid-template-columns: 8% auto 8%;
+        grid-template-rows: 8% auto 8%;
+    }
+        /* The grid that contain the key */
+        #calculator-key-grid
+        {
+            display: grid;
+            background-color: white;
+            grid-gap: 1%;
+
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+
+            grid-template-columns: 24% 24% 24% 24%;
+            grid-template-rows: 19% 19% 19% 19% 19%;
+
+        }
+            /* Normal key format */
+            .calculator-key
+            {
+                display: grid;
+                background-color: orange;
+
+                text-align: center;
+                padding-top: 5%;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 4vmin;
+                font-weight: bold;
+            }
+
+            /* Operant key format */
+            .operant-key
+            {
+                display: grid;
+                background-color: red;
+
+                text-align: center;
+                padding-top: 5%;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 4vmin;
+                font-weight: bold;
+            }
+
+            /* The bigger key size for the equal size */
+            #custom-equal-sign
+            {
+                grid-column: 4 / 5;
+                grid-row: 2 / 6;
+                
+                padding-top: 70%;
+            }
