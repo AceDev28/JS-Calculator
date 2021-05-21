@@ -93,7 +93,7 @@ a:hover
         /* Where the callculation and result will be display */
         #output-display
         {
-            display: grid;
+            
             background-color: white;
 
             grid-column: 2 / 3;
@@ -101,8 +101,9 @@ a:hover
 
             text-align: right;
             font-family: 'Courier New', Courier, monospace;
-            font-size: 9vmin;
+            font-size: 199%;
             font-weight: bold;
+            word-spacing: -20;
         }
 
     /* The calculator part for key */
