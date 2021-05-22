@@ -93,7 +93,7 @@ a:hover
         /* Where the callculation and result will be display */
         #output-display
         {
-            
+            width: 100%;
             background-color: white;
 
             grid-column: 2 / 3;
@@ -104,6 +104,8 @@ a:hover
             font-size: 199%;
             font-weight: bold;
             word-spacing: -20;
+            overflow:scroll;
+            
         }
 
     /* The calculator part for key */
@@ -140,6 +142,8 @@ a:hover
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: 4vmin;
                 font-weight: bold;
+
+                outline: 2px solid darkgreen;
             }
 
             /* Operant key format */
@@ -153,8 +157,12 @@ a:hover
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: 4vmin;
                 font-weight: bold;
+                outline: 2px solid darkgreen;
             }
-
+                .pressed
+                {
+                    background-color: darkred;
+                }
             /* The bigger key size for the equal size */
             #custom-equal-sign
             {

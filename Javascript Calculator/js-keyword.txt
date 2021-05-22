@@ -1,0 +1,21 @@
+
+querySelection
+- The querySelector() method returns the first element that matches a 
+specified CSS selector(s) in the document.
++ Syntax
+document.querySelector(".example");
+
+==============================================================================
+
+arrowFunction
++ hello = () => {
+  return "Hello World!";
+  }
+
+==============================================================================
+
+addEventListener
+- The addEventListener() method attaches an event handler to the specified 
+element.
++ Syntax
+element.addEventListener(event, function, |useCapture|)

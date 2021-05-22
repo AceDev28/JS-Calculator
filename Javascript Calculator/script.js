@@ -12,9 +12,23 @@ keys.addEventListener('click',
     // function
     e => 
     { 
+
+        
         // if the target match the element inside ( button in this case ) run
         if (e.target.matches('button'))
         {
+
+            var x = document.getElementById("output-display")
+            console.log("xx")
+            console.log(x.clientWidth)
+            console.log("yy")
+            console.log(x.scrollWidth)
+            if(x.clientWidth < x.scrollWidth  && x.style.fontSize != "150%" && x.style.fontSize != "100%"){
+                x.style.fontSize = "150%";
+            }
+            else if(x.clientWidth < x.scrollWidth  && x.style.fontSize == "150%"){
+                x.style.fontSize = "100%";
+            }
             // var point to data-action ( dataset to action )
             const key = e.target
             // get data-action of key
@@ -23,6 +37,8 @@ keys.addEventListener('click',
             const keyContent = key.textContent
             // get display textContent
             const displayContent = display.textContent
+
+            console.log(display.textContent + " haha");
             // if the key press are number ( no data-action )
             if(!action)
             {
@@ -38,7 +54,7 @@ keys.addEventListener('click',
                     display.textContent = displayContent + keyContent
                 }
             }
-            
+            // if the operant key are pressed
             if(
                 action ==='add'     ||
                 action ==='subtract'||
@@ -46,29 +62,37 @@ keys.addEventListener('click',
                 action ==='divide'
             )
             {
-                console.log("This is an operant key")
+                Array.from(key.parentNode.children).forEach(k => k.classList.remove('pressed'))
+                // add pressed clas s to the pressed key
+                key.classList.add('pressed')
             }
 
+            // if te decimal key if pressed
             if( action === 'decimal')
             {
-                console.log("This is a decimal key")
+                // it will add the decimal point to the current number
+                display.textContent = displayContent + '.'
             }
 
+            // if the equal key is pressed
             if( action === 'calculate' )
             {
+
                 console.log("This is an equal key")
             }
 
+            // if the AC key is pressed 
             if( action === 'delete' )
             {
-                console.log("This is a delete key")
+                // change the current conttent of the display screen to 0
+                display.textContent = '0'
+                Array.from(key.parentNode.children).forEach(k => k.classList.remove('pressed'))
             }
+            
+            // remove pressed class from the pressed key
+            
         }
 
     }
 )
-
-
-
-
 
